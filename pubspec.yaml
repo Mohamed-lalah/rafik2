@@ -39,6 +39,7 @@ dependencies:
   geolocator: ^10.1.0
   location: ^5.0.0
   swipeable_button_view: ^0.0.2
+  url_launcher: ^6.2.2
 
 
   # The following adds the Cupertino Icons font to your application.

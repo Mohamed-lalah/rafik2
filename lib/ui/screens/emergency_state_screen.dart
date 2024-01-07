@@ -30,132 +30,163 @@ class _EmergencyStateState extends State<EmergencyState> {
         child: Container(
             padding: const EdgeInsets.only(top: 30, left: 10, right: 10),
             child: Container(
+                decoration: const BoxDecoration(
+                    color: Color(0xffE76E13),
+                    borderRadius: BorderRadius.all(Radius.circular(12))),
+                padding: const EdgeInsets.all(10),
                 child: Container(
+                    padding: EdgeInsets.zero,
                     decoration: const BoxDecoration(
-                        color: Color(0xffE76E13),
-                        borderRadius: BorderRadius.all(Radius.circular(12))),
-                    padding: const EdgeInsets.all(10),
-                    child: Container(
-                        padding: EdgeInsets.zero,
-                        decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(8)),
-                            boxShadow: [
-                              BoxShadow(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.white,
+                              blurRadius: 10,
+                              spreadRadius: 10)
+                        ]),
+                    width: double.infinity,
+                    child: Column(children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                                color: const Color(0xffF7A947),
+                                borderRadius: BorderRadius.circular(30)),
+                            child: IconButton(
+                                icon:  const Icon(
+                                  Icons.menu,
+                                  size: 25,
                                   color: Colors.white,
-                                  blurRadius: 10,
-                                  spreadRadius: 10)
-                            ]),
-                        width: double.infinity,
-                        child: Column(children: [
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Container(
-                            margin: const EdgeInsets.all(15),
-                            height: height * .25,
-                            padding: const EdgeInsets.all(12),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(18),
-                              border: Border.all(
-                                width: 2,
-                                color: const Color(
-                                    0xffE76E13), //                   <--- border width here
-                              ),
-                            ),
-                            child: Column(
-                              children: [
-                                buildInfoItem(
-                                    Icons.person, "Name", "yahya abdelaziz"),
-                                buildInfoItem(Icons.local_fire_department_sharp,
-                                    "Blood type", "yahya abdelaziz"),
-                                buildInfoItem(Icons.person, "Allergies",
-                                    "yahya abdelaziz"),
-                                buildInfoItem(Icons.plus_one, "Medications",
-                                    "yahya abdelaziz"),
-                                buildInfoItem(
-                                    Icons.home, "Address", "yahya abdelaziz"),
-                                buildInfoItem(Icons.event_note_sharp,
-                                    "Medical notes", "yahya abdelaziz"),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 35,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              IconButton(
-                                  onPressed: () {},
-                                  icon: Image.asset(
-                                    "assets/images/mute.png",
-                                    width: 50,
-                                    height: 50,
-                                  )),
-                              IconButton(
-                                  onPressed: () {},
-                                  icon: Image.asset(
-                                    "assets/images/noCam.png",
-                                    width: 50,
-                                    height: 50,
-                                  )),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 35,
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(18),
-                              border: Border.all(
-                                width: 2,
-                                color: const Color(
-                                    0xffE76E13), //                   <--- border width here
-                              ),
-                            ),
-                            margin: const EdgeInsets.all(12),
-                            height: height * .30,
-                            child: Stack(
-                              children: [
-                                GoogleMap(
-                                  mapType: MapType.hybrid,
-                                  initialCameraPosition: _initialPosition,
-                                  onMapCreated: (mapController) {
-                                    gmc = mapController;
-                                  },
                                 ),
-                                Positioned(
-                                  top: 20,
-                                  left: 10,
-                                  child: Container(
-                                    height: 30,
-                                    child: ElevatedButton(
-                                        onPressed: () {},
-                                        child: Row(
-                                          mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                          children: [
-                                            const Icon(Icons.send, size: 18),
-                                            const SizedBox(
-                                              width: 6,
-                                            ),
-                                            Text(
-                                              "Set Location : ON",
-                                              style: GoogleFonts.openSans(
-                                                  fontSize: 13,
-                                                  fontWeight: FontWeight.normal,
-                                                  color:
-                                                  const Color(0xffE76E13)),
-                                            )
-                                          ],
-                                        )),
-                                  ),
-                                )
-                              ],
+                                onPressed: () {}),
+                          ),
+
+                          Text(
+                            "Emergency Stats",
+                            style: GoogleFonts.baloo2(
+                                fontSize: 18,
+                                color: const Color(0xffF7A947),
+                                fontWeight: FontWeight.bold),
+                          ),
+                          GestureDetector(
+                            child: const Icon(
+                              size: 30,
+                              Icons.settings,
+                              color: const Color(0xffF7A947),
                             ),
                           )
-                        ]))))));
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.all(15),
+                        height: height * .25,
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          border: Border.all(
+                            width: 2,
+                            color: const Color(
+                                0xffE76E13), //                   <--- border width here
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            buildInfoItem(
+                                Icons.person, "Name", "yahya abdelaziz"),
+                            buildInfoItem(Icons.local_fire_department_sharp,
+                                "Blood type", "yahya abdelaziz"),
+                            buildInfoItem(Icons.person, "Allergies",
+                                "yahya abdelaziz"),
+                            buildInfoItem(Icons.plus_one, "Medications",
+                                "yahya abdelaziz"),
+                            buildInfoItem(
+                                Icons.home, "Address", "yahya abdelaziz"),
+                            buildInfoItem(Icons.event_note_sharp,
+                                "Medical notes", "yahya abdelaziz"),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 35,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                "assets/images/mute.png",
+                                width: 50,
+                                height: 50,
+                              )),
+                          IconButton(
+                              onPressed: () {},
+                              icon: Image.asset(
+                                "assets/images/noCam.png",
+                                width: 50,
+                                height: 50,
+                              )),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 35,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(18),
+                          border: Border.all(
+                            width: 2,
+                            color: const Color(
+                                0xffE76E13), //                   <--- border width here
+                          ),
+                        ),
+                        margin: const EdgeInsets.all(12),
+                        height: height * .30,
+                        child: Stack(
+                          children: [
+                            GoogleMap(
+                              mapType: MapType.hybrid,
+                              initialCameraPosition: _initialPosition,
+                              onMapCreated: (mapController) {
+                                gmc = mapController;
+                              },
+                            ),
+                            Positioned(
+                              top: 20,
+                              left: 10,
+                              child: Container(
+                                height: 30,
+                                child: ElevatedButton(
+                                    onPressed: () {},
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.center,
+                                      children: [
+                                        const Icon(Icons.send, size: 18),
+                                        const SizedBox(
+                                          width: 6,
+                                        ),
+                                        Text(
+                                          "Set Location : ON",
+                                          style: GoogleFonts.openSans(
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.normal,
+                                              color:
+                                              const Color(0xffE76E13)),
+                                        )
+                                      ],
+                                    )),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ])))));
   }
 
   buildInfoItem(IconData ic, String infoType, String infoAnswer) {

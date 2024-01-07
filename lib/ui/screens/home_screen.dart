@@ -37,13 +37,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget buildBottomNav() => Theme(
       data: Theme.of(context)
-          .copyWith(canvasColor: Theme.of(context).cardColor),
+          .copyWith(canvasColor:AppColors.white),
       child: BottomNavigationBar(
-        unselectedItemColor: AppColors.navColor,
         selectedItemColor: AppColors.login_Info_Color,
+        unselectedItemColor: AppColors.navColor,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        backgroundColor: AppColors.white,
         elevation: 10,
         selectedLabelStyle: AppTheme.selectedItemStyle,
         unselectedLabelStyle:
@@ -53,17 +52,17 @@ class _HomeScreenState extends State<HomeScreen> {
           currenttabindex = index;
           setState(() {});
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
-              icon: Image.asset("assets/images/home 1x.png"), label: "Home"),
+              icon: ImageIcon(AssetImage("assets/images/home 1x.png")), label: "Home"),
           BottomNavigationBarItem(
-              icon: Image.asset("assets/images/setting1x.png"),
+              icon:ImageIcon(AssetImage("assets/images/setting1x.png")),
               label: "Emergency"),
           BottomNavigationBarItem(
-              icon: Image.asset("assets/images/informs 1x.png"),
+              icon: ImageIcon(AssetImage("assets/images/informs 1x.png")),
               label: "Inform"),
           BottomNavigationBarItem(
-              icon: Image.asset("assets/images/message 1x.png"),
+              icon: ImageIcon(AssetImage("assets/images/message 1x.png")),
               label: "Message"),
         ],
       ));
