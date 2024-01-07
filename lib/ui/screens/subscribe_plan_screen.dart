@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rafik/ui/widgets/custom_list_widget.dart';
 import 'package:rafik/ui/widgets/list_widget.dart';
 
 import '../utlities/app_colors.dart';
@@ -34,7 +35,7 @@ class SubscribeBlan extends StatelessWidget {
                   ),
                 )),
             SizedBox(
-              height: height * 0.05,
+              height: height * 0.04,
             ),
             Center(child: Image.asset("assets/images/plan1x.png")),
             SizedBox(
@@ -135,7 +136,7 @@ class SubscribeBlan extends StatelessWidget {
             ),
             Container(
               width: 369,
-              height: 185,
+              height: 220,
               child: Column(
                 children: [
                   Padding(

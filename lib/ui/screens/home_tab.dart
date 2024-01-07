@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rafik/ui/screens/memory_screen.dart';
+import 'package:rafik/ui/screens/voice_screen.dart';
 import 'package:rafik/ui/utlities/app_colors.dart';
 import 'package:rafik/ui/utlities/app_theme.dart';
 import 'package:rafik/ui/widgets/custom_list_widget.dart';
@@ -146,10 +147,15 @@ class HomeTab extends StatelessWidget {
                       style: AppTheme.memoriesStyle,
                     ),
                     Spacer(),
-                    Text(
-                      "Add ",
-                      style: AppTheme.memoriesStyle
-                          .copyWith(fontSize: 14, fontWeight: FontWeight.w600),
+                    InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(context, VoiceScreen.routeName);
+                      },
+                      child: Text(
+                        "Add ",
+                        style: AppTheme.memoriesStyle
+                            .copyWith(fontSize: 14, fontWeight: FontWeight.w600),
+                      ),
                     ),
                   ],
                 ),

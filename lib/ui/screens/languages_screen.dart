@@ -59,7 +59,7 @@ class LanguageScreen extends StatelessWidget {
                 child: Text("English",style: AppTheme.languageStyle),
               ),
             ),
-            SizedBox(height: height*0.02,),
+            SizedBox(height: height*0.025,),
             Divider(
               color: AppColors.login_Info_Color,
               thickness: 0.3,

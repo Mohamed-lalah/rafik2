@@ -74,7 +74,7 @@ class CustomListWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: height*0.011,),
+            SizedBox(height: height*0.01,),
             Divider(
               color: AppColors.login_Info_Color,
               thickness: 0.3,

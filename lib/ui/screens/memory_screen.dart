@@ -15,6 +15,7 @@ class MemoryScreen extends StatefulWidget {
 }
 
 class _MemoryScreenState extends State<MemoryScreen> {
+  String dropDownvalue= "";
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -57,12 +58,29 @@ class _MemoryScreenState extends State<MemoryScreen> {
                       .copyWith(fontWeight: FontWeight.w600,
                     fontSize: 16),)),
                 Spacer(),
-                IconButton(
-                  icon: Icon(Icons.more_vert,color: AppColors.memory_button_color,),
-                  onPressed: () {
-                    // Handle button press
-                  },
-                )
+               DropdownButton<String>
+                 (
+                   icon:Icon(Icons.more_vert,color: AppColors.memory_button_color,),
+                   value: dropDownvalue,
+                 onChanged: (String ?value ){
+                   dropDownvalue=value!;
+                 },
+                   items:[
+                     DropdownMenuItem<String>(
+                       value: "",
+                       child:Text(""),
+                     ),
+                     DropdownMenuItem<String>(
+                       value: "two",
+                       child:Text("two"),
+                     ),
+                     DropdownMenuItem<String>(
+                       value: "three",
+                       child:Text("three"),
+                     ),
+]
+               )
+
               ],
             ),
             Padding(
