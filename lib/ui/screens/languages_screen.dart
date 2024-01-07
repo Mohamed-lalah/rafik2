@@ -42,7 +42,7 @@ class LanguageScreen extends StatelessWidget {
               thickness: 0.8,
               height: 1,
             ),
-            SizedBox(height: height*0.02,),
+            SizedBox(height: height*0.023,),
             Center(
               child: Text("Arabic",style: AppTheme.languageStyle,
               ),
@@ -59,7 +59,7 @@ class LanguageScreen extends StatelessWidget {
                 child: Text("English",style: AppTheme.languageStyle),
               ),
             ),
-            SizedBox(height: height*0.022,),
+            SizedBox(height: height*0.02,),
             Divider(
               color: AppColors.login_Info_Color,
               thickness: 0.3,
@@ -71,12 +71,6 @@ class LanguageScreen extends StatelessWidget {
                 child: Text("French",style: AppTheme.languageStyle),
               ),
             ),
-            Divider(
-              color: AppColors.login_Info_Color,
-              thickness: 0.3,
-              height: 1,
-            ),
-            SizedBox(height: height*0.021,),
 
 
 

@@ -137,16 +137,16 @@ class _MemoryScreenState extends State<MemoryScreen> {
 
                         ),),
                             Spacer(),
-                            Icon(Icons.photo_library_outlined)
+                            Icon(Icons.photo_library_outlined,color: AppColors.white,)
                           ],
                         ) ),
                   ),
                 ),
                 Expanded(
-                  flex: 4,
+                  flex: 5,
                   child: Container(
-                    height: 39,
-                    width: 365,
+                    height: 40,
+                    width: 370,
                     padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: ElevatedButton(
                         style: ButtonStyle(
@@ -156,15 +156,27 @@ class _MemoryScreenState extends State<MemoryScreen> {
                         onPressed: (){},
                         child:Row(
                           children: [
-                            Text("Take Photo",style: AppTheme.memory_Sub_TitleStyle
-                              .copyWith(
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.white,
-                              fontSize: 15
+                            InkWell(
+                              onTap: (){
+                                showModalBottomSheet(context: context,
+                                    isScrollControlled: true,
+                                    builder: (_) => Padding(
+                                      padding: MediaQuery.of(context).viewInsets,
+                                      child:UploadPhoto(),
+                                    )
+                                );
 
-                            ),),
+                              },
+                              child: Text("Take Photo",style: AppTheme.memory_Sub_TitleStyle
+                                .copyWith(
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.white,
+                                fontSize: 15
+
+                              ),),
+                            ),
                             Spacer(),
-                            Icon(Icons.camera_alt_outlined)
+                            Icon(Icons.camera_alt_outlined,color: AppColors.white,)
                           ],
                         )
                          ),

@@ -7,6 +7,8 @@ import '../utlities/app_theme.dart';
 
 class ListWidget extends StatelessWidget {
   static const String routeName = "ListWidget";
+
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -25,7 +27,7 @@ class ListWidget extends StatelessWidget {
             ),
             SizedBox(height: height*0.02,),
             Center(
-              child: GestureDetector(
+              child: InkWell(
                 onTap: (){
                   Navigator.pushNamed(context, LanguageScreen.routeName);
                 },
@@ -35,7 +37,7 @@ class ListWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: height*0.021,),
+            SizedBox(height: height*0.02,),
             Divider(
               color: AppColors.login_Info_Color,
               thickness: 0.3,
@@ -44,9 +46,14 @@ class ListWidget extends StatelessWidget {
             Center(
               child: Padding(
                 padding: const EdgeInsets.only(top: 8.0),
-                child: Text("Memory Coverage",style: AppTheme.memoriesStyle.copyWith(
-                    fontSize: 20, color: AppColors.login_Info_Color
-                ),),
+                child: InkWell(
+                  onTap: (){
+                   Navigator.pushNamed(context, LanguageScreen.routeName);
+                  },
+                  child: Text("Memory Coverage",style: AppTheme.memoriesStyle.copyWith(
+                      fontSize: 20, color: AppColors.login_Info_Color
+                  ),),
+                ),
               ),
             ),
             SizedBox(height: height*0.02,),
@@ -58,12 +65,17 @@ class ListWidget extends StatelessWidget {
             Center(
               child: Padding(
                 padding: const EdgeInsets.only(top: 8.0),
-                child: Text("Voice Reminder",style: AppTheme.memoriesStyle.copyWith(
-                    fontSize: 20, color: AppColors.login_Info_Color
-                ),),
+                child: InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, LanguageScreen.routeName);
+                  },
+                  child: Text("Voice Reminder",style: AppTheme.memoriesStyle.copyWith(
+                      fontSize: 20, color: AppColors.login_Info_Color
+                  ),),
+                ),
               ),
             ),
-            SizedBox(height: height*0.02,),
+            SizedBox(height: height*0.011,),
             Divider(
               color: AppColors.login_Info_Color,
               thickness: 0.3,
@@ -72,9 +84,14 @@ class ListWidget extends StatelessWidget {
              Center(
                child: Padding(
                  padding: const EdgeInsets.only(top: 8.0),
-                 child: Text("About us",style: AppTheme.memoriesStyle.copyWith(
-                    fontSize: 20, color: AppColors.login_Info_Color
-            ),),
+                 child: InkWell(
+                   onTap: (){
+                     Navigator.pushNamed(context, LanguageScreen.routeName);
+                   },
+                   child: Text("About us",style: AppTheme.memoriesStyle.copyWith(
+                      fontSize: 20, color: AppColors.login_Info_Color
+                               ),),
+                 ),
                ),
              ),
             Spacer(),

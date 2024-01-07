@@ -202,35 +202,31 @@ class _EmergencyTabState extends State<EmergencyTab> {
                 Stack(
                   alignment: Alignment.bottomCenter,
                   children: [
-                    GestureDetector(
-                      onTap: (){
-                        Navigator.pushNamed(context, EmergencyState.routeName);
-                      },
-                      child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 40, vertical: 25),
-                          child: SwipeableButtonView(
-                            buttonWidget: Container(
-                              child: const Icon(
-                                Icons.arrow_forward_ios_rounded,
-                                color: Colors.grey,
-                              ),
+                    Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 40, vertical: 25),
+                        child: SwipeableButtonView(
+                          buttonWidget: Container(
+                            child: const Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              color: Colors.grey,
                             ),
-                            activeColor: const Color(0xffF7A947),
-                            isFinished: isFinished,
-                            onWaitingProcess: () {
-                              Future.delayed(const Duration(seconds: 2), () {
-                                setState(() {
-                                  isFinished = true;
-                                });
-                              });
-                            },
-                            onFinish: () async {
+                          ),
+                          activeColor: const Color(0xffF7A947),
+                          isFinished: isFinished,
+                          onWaitingProcess: () {
+                            Future.delayed(const Duration(seconds: 2), () {
                               setState(() {
-                                isFinished = false;
+                                isFinished = true;
                               });
-                            }, buttonText: "Emergency",)),
-                    )
+                            });
+                          },
+                          onFinish: () async {
+                            Navigator.pushNamed(context, EmergencyState.routeName);
+                            setState(() {
+                              isFinished = false;
+                            });
+                          }, buttonText: "Emergency",))
                   ],
                 ),
               ]),

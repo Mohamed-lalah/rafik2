@@ -36,21 +36,11 @@ class LoginScreen extends StatelessWidget {
               decoration: InputDecoration(
                   fillColor: AppColors.white,
                   filled: true,
-
+                   hintText: "Ahmed@gmail.com",
+                   hintStyle: AppTheme.loginLabelStyle.copyWith(color: AppColors.login_hint_Color),
                   border: OutlineInputBorder(
                   ),
-                  label:  Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(right: width*0.3,top: height*0.01),
-                        child: Text("Email",style: AppTheme.loginLabelStyle,),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 8),
-                        child: Text("ahmed@gmail.com",style: AppTheme.login_hint_Style,),
-                      )
-                    ],
-                  ),
+                  labelText: "Email",
                   labelStyle:AppTheme.loginLabelStyle
 
 
@@ -67,21 +57,12 @@ class LoginScreen extends StatelessWidget {
                     color: AppColors.login_hint_Color,),
                   fillColor: AppColors.white,
                   filled: true,
+                  hintText: "***********",
+                  hintStyle: AppTheme.loginLabelStyle.copyWith(color: AppColors.login_hint_Color),
 
                   border: OutlineInputBorder(
                   ),
-                  label:  Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(right: width*0.3,top: height*0.01),
-                        child: Text("Password",style: AppTheme.loginLabelStyle,),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 8),
-                        child: Text("****************",style: AppTheme.login_hint_Style,),
-                      )
-                    ],
-                  ),
+                  labelText:"password" ,
                   labelStyle:AppTheme.loginLabelStyle
 
 

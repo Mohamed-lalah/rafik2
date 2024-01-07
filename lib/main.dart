@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rafik/ui/screens/emergencty_tab_screen.dart';
 import 'package:rafik/ui/screens/emergency_state_screen.dart';
 import 'package:rafik/ui/screens/home_screen.dart';
+import 'package:rafik/ui/screens/home_tab.dart';
 import 'package:rafik/ui/screens/informs_screen.dart';
 import 'package:rafik/ui/screens/languages_screen.dart';
 import 'package:rafik/ui/screens/login_screeen.dart';
@@ -57,7 +58,7 @@ class MyApp extends StatelessWidget {
         // click on upload photo button  -> Upload Photo screen
         //  click on camera icon -> Upload Done screen
       },
-      initialRoute:  LoginScreen.routeName,
+      initialRoute:  LoginScreen.routeName
     );
   }
 }

@@ -36,21 +36,12 @@ class RegisterScreen extends StatelessWidget {
                 decoration: InputDecoration(
                     fillColor: AppColors.white,
                     filled: true,
+                    hintText: "Mohamed",
+                    hintStyle: AppTheme.loginLabelStyle.copyWith(color: AppColors.login_hint_Color),
 
                     border: OutlineInputBorder(
                     ),
-                    label:  Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(right: width*0.2,top: height*0.01),
-                          child: Text("Name",style: AppTheme.loginLabelStyle,),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 6),
-                          child: Text("Ahmed Adel",style: AppTheme.login_hint_Style,),
-                        )
-                      ],
-                    ),
+                    labelText:"Name",
                     labelStyle:AppTheme.loginLabelStyle
 
 
@@ -65,21 +56,35 @@ class RegisterScreen extends StatelessWidget {
                 decoration: InputDecoration(
                     fillColor: AppColors.white,
                     filled: true,
+                    hintText: "ahmed@gmail.com",
+                    hintStyle: AppTheme.loginLabelStyle.copyWith(color: AppColors.login_hint_Color),
 
                     border: OutlineInputBorder(
                     ),
-                    label:  Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(right: width*0.3,top: height*0.01),
-                          child: Text("Email",style: AppTheme.loginLabelStyle,),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Text("ahmed@gmail.com",style: AppTheme.login_hint_Style,),
-                        )
-                      ],
+                    labelText: "Email",
+                    labelStyle:AppTheme.loginLabelStyle
+
+
+
+                ),
+              ),
+            ),
+            Container(
+              width: 376,
+              height: 58,
+              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+              child:  TextField(
+                decoration: InputDecoration(
+                    suffixIcon: Icon(Icons.remove_red_eye_rounded,
+                      color: AppColors.login_hint_Color,),
+                    fillColor: AppColors.white,
+                    filled: true,
+                    hintText: "************",
+                    hintStyle:  AppTheme.loginLabelStyle.copyWith(color: AppColors.login_hint_Color),
+
+                    border: OutlineInputBorder(
                     ),
+                    labelText:"Password",
                     labelStyle:AppTheme.loginLabelStyle
 
 
@@ -96,53 +101,14 @@ class RegisterScreen extends StatelessWidget {
                       color: AppColors.login_hint_Color,),
                     fillColor: AppColors.white,
                     filled: true,
+                    hintText: "**************",
+                    hintStyle:  AppTheme.loginLabelStyle.copyWith(color: AppColors.login_hint_Color),
 
                     border: OutlineInputBorder(
                     ),
-                    label:  Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(right: width*0.3,top: height*0.01),
-                          child: Text("Password",style: AppTheme.loginLabelStyle,),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Text("****************",style: AppTheme.login_hint_Style,),
-                        )
-                      ],
-                    ),
+                    labelText: "Confirm Password",
                     labelStyle:AppTheme.loginLabelStyle
 
-
-                ),
-              ),
-            ),
-            Container(
-              width: 376,
-              height: 58,
-              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-              child:  TextField(
-                decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.remove_red_eye_rounded,
-                      color: AppColors.login_hint_Color,),
-                    fillColor: AppColors.white,
-                    filled: true,
-
-                    border: OutlineInputBorder(
-                    ),
-                    label:  Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(right: width*0.3,top: height*0.01),
-                          child: Text("Confirm Password",style: AppTheme.loginLabelStyle,),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 8),
-                          child: Text("***************",style: AppTheme.login_hint_Style,),
-                        )
-                      ],
-                    ),
-                    labelStyle:AppTheme.loginLabelStyle
 
 
                 ),

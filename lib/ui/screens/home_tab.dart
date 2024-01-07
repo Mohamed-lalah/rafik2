@@ -46,6 +46,9 @@ class HomeTab extends StatelessWidget {
                     child: Image.asset("assets/images/name 1x.png"),
                   ),
                   InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, ListWidget.routeName);
+                    },
                     child: Padding(
                       padding: const EdgeInsets.only(right: 20),
                       child: Image.asset("assets/images/alarm 1x.png"),
