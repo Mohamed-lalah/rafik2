@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rafik/ui/screens/emergency_state_screen.dart';
+import 'package:rafik/ui/widgets/custom_list_widget.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -38,9 +39,14 @@ class _EmergencyTabState extends State<EmergencyTab> {
                           color: const Color(0xffF7A947),
                           borderRadius: BorderRadius.circular(40)),
                       child: IconButton(
-                          icon: const Icon(
-                            Icons.menu,
-                            color: Colors.white,
+                          icon: InkWell(
+                            onTap: (){
+                              Navigator.pushNamed(context, CustomListWidget.routeName);
+                            },
+                            child: const Icon(
+                              Icons.menu,
+                              color: Colors.white,
+                            ),
                           ),
                           onPressed: () {}),
                     ),
@@ -65,10 +71,7 @@ class _EmergencyTabState extends State<EmergencyTab> {
                                     fontWeight: FontWeight.normal),
                               ),
                               GestureDetector(
-                                child: const Icon(
-                                  Icons.settings,
-                                  color: Colors.white,
-                                ),
+                                child:  Image.asset("assets/images/star white 1x.png")
                               )
                             ],
                           ),
@@ -178,6 +181,16 @@ class _EmergencyTabState extends State<EmergencyTab> {
                                 ),
                                 buildEmerContactRow("assets/images/person.png",
                                     "Mahmoud elkholy", "Grand", "0129082222"),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                buildEmerContactRow("assets/images/person.png",
+                                    "Eslam Ahmed", "son", "0122243522"),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                buildEmerContactRow("assets/images/person.png",
+                                    "Asmaa sherif", "Brother", "0112322222"),
                               ],
                             )
                           ],
@@ -261,6 +274,7 @@ class _EmergencyTabState extends State<EmergencyTab> {
     );
   }
 
+
   buildEmerContactRow(
       String imgPath, String name, String relation, String phoneNum) {
     return Row(
@@ -304,7 +318,14 @@ class _EmergencyTabState extends State<EmergencyTab> {
                     Icons.call,
                     color: Colors.black,
                   ),
-                  onPressed: () => launch("tel://$phoneNum")),
+                  onPressed: () async {
+                    Uri phoneno = Uri.parse('tel:+2$phoneNum');
+                    if (await launchUrl(phoneno)) {
+                      //dialer opened
+                    }else{
+                      //dailer is not opened
+                    }
+                  }),
               Text(
                 phoneNum,
                 style: GoogleFonts.openSans(

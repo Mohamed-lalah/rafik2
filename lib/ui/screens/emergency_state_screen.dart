@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:rafik/ui/widgets/custom_list_widget.dart';
 
 
 class EmergencyState extends StatefulWidget {
@@ -55,10 +56,15 @@ class _EmergencyStateState extends State<EmergencyState> {
                                 color: const Color(0xffF7A947),
                                 borderRadius: BorderRadius.circular(30)),
                             child: IconButton(
-                                icon:  const Icon(
-                                  Icons.menu,
-                                  size: 25,
-                                  color: Colors.white,
+                                icon:  InkWell(
+                                  onTap: (){
+                                    Navigator.pushNamed(context, CustomListWidget.routeName);
+                                  },
+                                  child: const Icon(
+                                    Icons.menu,
+                                    size: 25,
+                                    color: Colors.white,
+                                  ),
                                 ),
                                 onPressed: () {}),
                           ),
@@ -71,11 +77,7 @@ class _EmergencyStateState extends State<EmergencyState> {
                                 fontWeight: FontWeight.bold),
                           ),
                           GestureDetector(
-                            child: const Icon(
-                              size: 30,
-                              Icons.settings,
-                              color: const Color(0xffF7A947),
-                            ),
+                            child:Image.asset("assets/images/star orange 1x.png")
                           )
                         ],
                       ),
