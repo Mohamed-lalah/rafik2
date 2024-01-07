@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rafik/ui/screens/cbs_screen.dart';
 
 import '../utlities/app_colors.dart';
 
@@ -225,11 +226,16 @@ class _InformsScreenState extends State<InformsScreen> {
               children: [
                 Expanded(
                   flex:5,
-                  child: Text("CBC",
-                      style: GoogleFonts.baloo2(
-                          fontSize: 13,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold)),
+                  child: TextButton(
+                    onPressed: (){
+                      Navigator.pushNamed(context, CBSScreen.routeName);
+                    },
+                    child: Text("CBC",
+                        style: GoogleFonts.baloo2(
+                            fontSize: 13,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold)),
+                  ),
                 ),
                 Expanded(
                   flex: 4,

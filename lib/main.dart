@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
         // click on upload photo button  -> Upload Photo screen
         //  click on camera icon -> Upload Done screen
       },
-      initialRoute:  HomeScreen.routeName,
+      initialRoute:  LoginScreen.routeName,
     );
   }
 }
