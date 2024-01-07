@@ -155,6 +155,7 @@ class _InformsScreenState extends State<InformsScreen> {
                           fontSize: 14,
                           fontWeight: FontWeight.normal),
                     ),
+                    SizedBox(width: 0.1,),
                     Text("20/1/2002",
                         style: GoogleFonts.openSans(
                             color: Colors.grey,
@@ -169,88 +170,73 @@ class _InformsScreenState extends State<InformsScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Test",
-                    style: GoogleFonts.baloo2(
-                        fontSize: 13,
+                    style: GoogleFonts.openSans(
+                        fontSize: 14,
                         color: Colors.black,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.w600)),
                 Text("Result",
-                    style: GoogleFonts.baloo2(
-                        fontSize: 13,
+                    style: GoogleFonts.openSans(
+                        fontSize: 14,
                         color: Colors.black,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.w600)),
                 Text("Normal Range",
-                    style: GoogleFonts.baloo2(
-                        fontSize: 13,
+                    style: GoogleFonts.openSans(
+                        fontSize: 14,
                         color: Colors.black,
-                        fontWeight: FontWeight.bold)),
+                        fontWeight: FontWeight.w600)),
               ],
             ),
           ),
           Container(
             margin: EdgeInsets.only(right: 12, left: 12, bottom: 6, top: 6),
             child: Divider(
-              thickness: 2,
+              thickness: 1,
               color: Color(0xff49A4AD),
             ),
           ),
+
           Container(
             margin: EdgeInsets.only(right: 12, left: 12, top: 6),
             child: Row(
               children: [
                 Expanded(
                   flex:5,
-                  child: Text("CBC",
-                      style: GoogleFonts.baloo2(
-                          fontSize: 13,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold)),
-                ),
-                Expanded(
-                  flex: 4,
-                  child: Text("14",
-                      style:
-                          GoogleFonts.baloo2(fontSize: 13, color: Colors.black)),
-                ),
-                Expanded(
-                  flex: 3,
-                  child: Text("11 to 8",
-                      style:
-                          GoogleFonts.baloo2(fontSize: 13, color: Colors.black)),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.only(right: 12, left: 12, top: 6),
-            child: Row(
-              children: [
-                Expanded(
-                  flex:5,
-                  child: TextButton(
-                    onPressed: (){
+                  child: InkWell(
+                    onTap: (){
                       Navigator.pushNamed(context, CBSScreen.routeName);
                     },
                     child: Text("CBC",
-                        style: GoogleFonts.baloo2(
-                            fontSize: 13,
+                        style: GoogleFonts.openSans(
+                            fontSize: 14,
                             color: Colors.black,
-                            fontWeight: FontWeight.bold)),
+                            fontWeight: FontWeight.w600)
+                    ),
                   ),
                 ),
                 Expanded(
                   flex: 4,
                   child: Text("14",
                       style:
-                      GoogleFonts.baloo2(fontSize: 13, color: Colors.black)),
+                      GoogleFonts.openSans
+                        (fontSize: 14, color: Colors.grey,
+                        fontWeight: FontWeight.w400,)
+                  ),
                 ),
                 Expanded(
                   flex: 3,
                   child: Text("11 to 8",
                       style:
-                      GoogleFonts.baloo2(fontSize: 13, color: Colors.black)),
+                      GoogleFonts.openSans
+                        (
+                        fontSize: 14, color: Colors.grey,
+                        fontWeight: FontWeight.w400,)
+                  ),
                 ),
               ],
             ),
+          ),
+          SizedBox(
+            height: height*0.02,
           ),
           Container(
             margin: EdgeInsets.only(right: 12, left: 12, top: 6),
@@ -258,23 +244,30 @@ class _InformsScreenState extends State<InformsScreen> {
               children: [
                 Expanded(
                   flex:5,
-                  child: Text("CBC",
-                      style: GoogleFonts.baloo2(
-                          fontSize: 13,
+                  child: Text("Hemoglobin",
+                      style: GoogleFonts.openSans(
+                          fontSize: 14,
                           color: Colors.black,
-                          fontWeight: FontWeight.bold)),
+                          fontWeight: FontWeight.w600)),
                 ),
                 Expanded(
                   flex: 4,
                   child: Text("14",
                       style:
-                      GoogleFonts.baloo2(fontSize: 13, color: Colors.black)),
+                          GoogleFonts.openSans
+                        (fontSize: 14, color: Colors.grey,
+                      fontWeight: FontWeight.w400,)
+                  ),
                 ),
                 Expanded(
                   flex: 3,
                   child: Text("11 to 8",
                       style:
-                      GoogleFonts.baloo2(fontSize: 13, color: Colors.black)),
+                      GoogleFonts.openSans
+                        (
+                        fontSize: 14, color: Colors.grey,
+                          fontWeight: FontWeight.w400,)
+                  ),
                 ),
               ],
             ),

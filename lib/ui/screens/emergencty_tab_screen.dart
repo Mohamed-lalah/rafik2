@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rafik/ui/screens/emergency_state_screen.dart';
+import 'package:rafik/ui/widgets/custom_list_widget.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
 
 import '../widgets/list_widget.dart';
@@ -43,7 +44,7 @@ class _EmergencyTabState extends State<EmergencyTab> {
                         color: Colors.white,
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, ListWidget.routeName);
+                        Navigator.pushNamed(context, CustomListWidget.routeName);
                       }),
                 ),
                 Container(

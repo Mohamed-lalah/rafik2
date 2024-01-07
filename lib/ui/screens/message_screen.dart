@@ -12,11 +12,17 @@ class MessageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backGroundColor,
+      appBar: AppBar(
+        title: Text("Message Screen "),
+        elevation: 8,
+        toolbarHeight: 100,
+        backgroundColor: Colors.blue,
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text("Comming Soon ",style: AppTheme.minutesStyle.copyWith(fontWeight: FontWeight.bold, fontSize: 26),)
+          Center(child: Text("Comming Soon ",style: AppTheme.minutesStyle.copyWith(fontWeight: FontWeight.bold, fontSize: 26),))
         ],
       ),
     );

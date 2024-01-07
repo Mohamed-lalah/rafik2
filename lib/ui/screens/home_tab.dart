@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rafik/ui/screens/memory_screen.dart';
 import 'package:rafik/ui/utlities/app_colors.dart';
 import 'package:rafik/ui/utlities/app_theme.dart';
+import 'package:rafik/ui/widgets/custom_list_widget.dart';
 import 'package:rafik/ui/widgets/list_widget.dart';
 import 'package:rafik/ui/widgets/memories_widget.dart';
 
@@ -47,7 +48,7 @@ class HomeTab extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: (){
-                      Navigator.pushNamed(context, ListWidget.routeName);
+                      Navigator.pushNamed(context, CustomListWidget.routeName);
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(right: 20),

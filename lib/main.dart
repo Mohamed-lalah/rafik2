@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rafik/ui/screens/cbs_screen.dart';
 import 'package:rafik/ui/screens/emergencty_tab_screen.dart';
 import 'package:rafik/ui/screens/emergency_state_screen.dart';
 import 'package:rafik/ui/screens/home_screen.dart';
@@ -7,10 +8,12 @@ import 'package:rafik/ui/screens/informs_screen.dart';
 import 'package:rafik/ui/screens/languages_screen.dart';
 import 'package:rafik/ui/screens/login_screeen.dart';
 import 'package:rafik/ui/screens/memory_screen.dart';
+import 'package:rafik/ui/screens/message_screen.dart';
 import 'package:rafik/ui/screens/record_screeen.dart';
 import 'package:rafik/ui/screens/register_screen.dart';
 import 'package:rafik/ui/screens/subscribe_plan_screen.dart';
 import 'package:rafik/ui/screens/voice_screen.dart';
+import 'package:rafik/ui/widgets/custom_list_widget.dart';
 import 'package:rafik/ui/widgets/list_widget.dart';
 
 void main() {
@@ -39,6 +42,9 @@ class MyApp extends StatelessWidget {
         EmergencyTab.routeName: (_) => EmergencyTab(),
         EmergencyState.routeName: (_) => EmergencyState(),
         MemoryScreen.routeName: (_) => MemoryScreen(),
+        CustomListWidget.routeName: (_)=> CustomListWidget(),
+        MessageScreen.routeName: (_)=> MessageScreen(),
+        CBSScreen.routeName:(_)=> CBSScreen()
 
         //navigation map
         // register screen  ->  Login screen   or Home Screen
@@ -58,7 +64,7 @@ class MyApp extends StatelessWidget {
         // click on upload photo button  -> Upload Photo screen
         //  click on camera icon -> Upload Done screen
       },
-      initialRoute:  LoginScreen.routeName
+      initialRoute: InformsScreen.routeName
     );
   }
 }
