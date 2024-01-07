@@ -3,6 +3,7 @@ import 'package:rafik/ui/screens/emergencty_tab_screen.dart';
 import 'package:rafik/ui/screens/home_tab.dart';
 import 'package:rafik/ui/screens/informs_screen.dart';
 import 'package:rafik/ui/screens/login_screeen.dart';
+import 'package:rafik/ui/screens/message_screen.dart';
 
 import '../utlities/app_colors.dart';
 import '../utlities/app_theme.dart';
@@ -23,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     HomeTab(),
     EmergencyTab(),
     InformsScreen(),
-    LoginScreen()
+    MessageScreen()
   ];
 
   @override

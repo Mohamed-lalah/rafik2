@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rafik/ui/screens/memory_screen.dart';
 import 'package:rafik/ui/utlities/app_colors.dart';
 import 'package:rafik/ui/utlities/app_theme.dart';
 import 'package:rafik/ui/widgets/list_widget.dart';
@@ -27,7 +28,7 @@ class HomeTab extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 70),
                     child: GestureDetector(
                       onTap: () {
-                        ListWidget();
+                        Navigator.pushNamed(context, ListWidget.routeName);
                       },
                       child: Padding(
                         padding: EdgeInsets.only(
@@ -44,9 +45,11 @@ class HomeTab extends StatelessWidget {
                     padding: EdgeInsets.only(right: width * 0.3),
                     child: Image.asset("assets/images/name 1x.png"),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 20),
-                    child: Image.asset("assets/images/alarm 1x.png"),
+                  InkWell(
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: Image.asset("assets/images/alarm 1x.png"),
+                    ),
                   )
                 ],
               ),
@@ -77,10 +80,15 @@ class HomeTab extends StatelessWidget {
                       style: AppTheme.memoriesStyle,
                     ),
                     Spacer(),
-                    Text(
-                      "See All ",
-                      style: AppTheme.memoriesStyle
-                          .copyWith(fontSize: 14, fontWeight: FontWeight.w600),
+                    InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(context, MemoryScreen.routeName);
+                      },
+                      child: Text(
+                        "See All ",
+                        style: AppTheme.memoriesStyle
+                            .copyWith(fontSize: 14, fontWeight: FontWeight.w600),
+                      ),
                     ),
                   ],
                 ),
@@ -135,7 +143,7 @@ class HomeTab extends StatelessWidget {
                     ),
                     Spacer(),
                     Text(
-                      "See All ",
+                      "Add ",
                       style: AppTheme.memoriesStyle
                           .copyWith(fontSize: 14, fontWeight: FontWeight.w600),
                     ),
@@ -350,7 +358,7 @@ class HomeTab extends StatelessWidget {
                     ),
                     Spacer(),
                     Text(
-                      "See All ",
+                      "Add ",
                       style: AppTheme.memoriesStyle
                           .copyWith(fontSize: 14, fontWeight: FontWeight.w600),
                     ),

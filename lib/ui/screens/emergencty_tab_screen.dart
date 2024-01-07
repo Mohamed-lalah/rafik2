@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rafik/ui/screens/emergency_state_screen.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
 
+import '../widgets/list_widget.dart';
+
 class EmergencyTab extends StatefulWidget {
   static const String routeName = "EmergencyTab";
 
@@ -40,7 +42,9 @@ class _EmergencyTabState extends State<EmergencyTab> {
                         Icons.menu,
                         color: Colors.white,
                       ),
-                      onPressed: () {}),
+                      onPressed: () {
+                        Navigator.pushNamed(context, ListWidget.routeName);
+                      }),
                 ),
                 Container(
                   height: height * .31,

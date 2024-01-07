@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
         ListWidget.routeName: (_) => ListWidget(),
         EmergencyTab.routeName: (_) => EmergencyTab(),
         EmergencyState.routeName: (_) => EmergencyState(),
+        MemoryScreen.routeName: (_) => MemoryScreen(),
 
         //navigation map
         // register screen  ->  Login screen   or Home Screen
