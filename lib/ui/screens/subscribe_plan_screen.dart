@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rafik/ui/screens/home_screen.dart';
 import 'package:rafik/ui/widgets/custom_list_widget.dart';
 import 'package:rafik/ui/widgets/list_widget.dart';
 
@@ -47,7 +48,7 @@ class SubscribeBlan extends StatelessWidget {
                   iconSize: 0,
                   decoration: InputDecoration(
                       focusColor: AppColors.premiumColor,
-                      suffixIcon: Icon(
+                      suffixIcon: const Icon(
                         Icons.arrow_drop_down_circle_sharp,
                         color: AppColors.premiumColor,
                       ),
@@ -55,7 +56,7 @@ class SubscribeBlan extends StatelessWidget {
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(24),
                           borderSide:
-                              BorderSide(color: AppColors.premiumColor)),
+                              const BorderSide(color: AppColors.premiumColor)),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(24),
                           borderSide: BorderSide(
@@ -64,23 +65,38 @@ class SubscribeBlan extends StatelessWidget {
                   value: value,
                   items: [
                     DropdownMenuItem(
-                      child: Text(
-                        "intro",
-                        style: AppTheme.dropDownStyle,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                        },
+                        child: Text(
+                          "intro",
+                          style: AppTheme.dropDownStyle,
+                        ),
                       ),
                       value: -1,
                     ),
                     DropdownMenuItem(
-                      child: Text(
-                        "text",
-                        style: AppTheme.dropDownStyle,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                        },
+                        child: Text(
+                          "text",
+                          style: AppTheme.dropDownStyle,
+                        ),
                       ),
                       value: 1,
                     ),
                     DropdownMenuItem(
-                      child: Text(
-                        "text",
-                        style: AppTheme.dropDownStyle,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                        },
+                        child: Text(
+                          "text",
+                          style: AppTheme.dropDownStyle,
+                        ),
                       ),
                       value: 2,
                     ),
@@ -111,23 +127,38 @@ class SubscribeBlan extends StatelessWidget {
                   value: value,
                   items: [
                     DropdownMenuItem(
-                      child: Text(
-                        "Base",
-                        style: AppTheme.dropDownStyle,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                        },
+                        child: Text(
+                          "Base",
+                          style: AppTheme.dropDownStyle,
+                        ),
                       ),
                       value: -1,
                     ),
                     DropdownMenuItem(
-                      child: Text(
-                        "Base",
-                        style: AppTheme.dropDownStyle,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                        },
+                        child: Text(
+                          "Base",
+                          style: AppTheme.dropDownStyle,
+                        ),
                       ),
                       value: 1,
                     ),
                     DropdownMenuItem(
-                      child: Text(
-                        "Base",
-                        style: AppTheme.dropDownStyle,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                        },
+                        child: Text(
+                          "Base",
+                          style: AppTheme.dropDownStyle,
+                        ),
                       ),
                       value: 2,
                     ),
@@ -268,23 +299,38 @@ class SubscribeBlan extends StatelessWidget {
                   value: value,
                   items: [
                     DropdownMenuItem(
-                      child: Text(
-                        "Enterprise",
-                        style: AppTheme.dropDownStyle,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                        },
+                        child: Text(
+                          "Enterprise",
+                          style: AppTheme.dropDownStyle,
+                        ),
                       ),
                       value: -1,
                     ),
                     DropdownMenuItem(
-                      child: Text(
-                        "EnterPrise",
-                        style: AppTheme.dropDownStyle,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                        },
+                        child: Text(
+                          "EnterPrise",
+                          style: AppTheme.dropDownStyle,
+                        ),
                       ),
                       value: 1,
                     ),
                     DropdownMenuItem(
-                      child: Text(
-                        "EnterPrise",
-                        style: AppTheme.dropDownStyle,
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+                        },
+                        child: Text(
+                          "EnterPrise",
+                          style: AppTheme.dropDownStyle,
+                        ),
                       ),
                       value: 2,
                     ),
